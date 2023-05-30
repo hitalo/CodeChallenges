@@ -1,4 +1,4 @@
-package utils;
+package utils.list;
 
 public class ListNode {
 	public int val;

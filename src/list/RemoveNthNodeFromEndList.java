@@ -1,6 +1,7 @@
 package list;
 
-import utils.ListNode;
+import utils.list.ListNode;
+import utils.list.Utils;
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 public class RemoveNthNodeFromEndList {
@@ -28,19 +29,6 @@ public class RemoveNthNodeFromEndList {
 		RemoveNthNodeFromEndList solution = new RemoveNthNodeFromEndList();
 		System.out.println("Expected: 1 2 3 5");
 		System.out.print("Result:   ");
-		showValues(solution.removeNthFromEnd(createList(), 2));
-	}
-	
-	
-	private static ListNode createList() {
-		return new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, null)))));
-	}
-	
-	
-	private static void showValues(ListNode head) {
-		while(head != null) {
-			System.out.print(head.val + " ");
-			head = head.next;
-		}
+		Utils.showValues(solution.removeNthFromEnd(Utils.createList(5), 2));
 	}
 }

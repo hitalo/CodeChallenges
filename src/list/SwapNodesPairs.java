@@ -1,6 +1,7 @@
 package list;
 
-import utils.ListNode;
+import utils.list.ListNode;
+import utils.list.Utils;
 
 // https://leetcode.com/problems/swap-nodes-in-pairs/
 public class SwapNodesPairs {
@@ -18,20 +19,6 @@ public class SwapNodesPairs {
 		SwapNodesPairs solution = new SwapNodesPairs();
 		System.out.println("Expected: 2 1 4 3");
 		System.out.print("Result:   ");
-		showValues(solution.swapPairs(createList()));
+		Utils.showValues(solution.swapPairs(Utils.createList(4)));
 	}
-	
-	
-	private static ListNode createList() {
-		return new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, null))));
-	}
-	
-	
-	private static void showValues(ListNode head) {
-		while(head != null) {
-			System.out.print(head.val + " ");
-			head = head.next;
-		}
-	}
-
 }
